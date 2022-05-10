@@ -13,7 +13,9 @@
         <td><%= user.name %></td>
         <td>フォロー数: <%= user.followings.count %></td>
         <td>フォロワー数: <%= user.followers.count %></td>
-        <td><%= render "relationships/follw_list", user: user %></td>
+        <td class="follow_list">
+          <%= render "relationships/follw_list", user: user %>
+        </td>
         <td><%= link_to 'Show', user, class: "user_#{user.id}" %></td>
       </tr>
     <% end %>
